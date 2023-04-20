@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 interface RestaurantDetailProps
 {
@@ -11,9 +12,9 @@ const RestaurantDetail: React.FC<RestaurantDetailProps > = () => {
           <main className="max-w-screen-2xl m-auto bg-white">
             {/* NAVBAR */}
             <nav className="bg-white p-2 flex justify-between">
-              <a href="" className="font-bold text-gray-700 text-2xl">
+              <Link href="/" className="font-bold text-gray-700 text-2xl">
                 {" "} OpenTable{" "}
-              </a>
+              </Link>
               <div>
                 <div className="flex">
                   <button
@@ -40,8 +41,8 @@ const RestaurantDetail: React.FC<RestaurantDetailProps > = () => {
               <div className="bg-white w-[70%] rounded p-3 shadow">
                 {/* RESAURANT NAVBAR */}
                 <nav className="flex text-reg border-b pb-2">
-                  <a href="" className="mr-7"> Overview </a>
-                  <a href="" className="mr-7"> Menu </a>
+                  <Link href="/restaurant/milestones-grill" className="mr-7"> Overview </Link>
+                  <Link href="/restaurant/milestones-grill/menu" className="mr-7"> Menu </Link>
                 </nav>
                 {/* RESAURANT NAVBAR */} {/* TITLE */}
                 <div className="mt-4 border-b pb-6">
@@ -162,11 +163,13 @@ const RestaurantDetail: React.FC<RestaurantDetailProps > = () => {
                     </div>
                   </div>
                   <div className="mt-5">
-                    <button
-                        className="bg-red-600 rounded w-full px-4 text-white font-bold h-16"
-                    >
-                      Find a Time
-                    </button>
+                    <Link href="/reserve/milestone-grill">
+                      <button
+                          className="bg-red-600 rounded w-full px-4 text-white font-bold h-16"
+                      >
+                        Find a Time
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>

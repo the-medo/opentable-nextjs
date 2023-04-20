@@ -1,3 +1,5 @@
+import Link from "next/link";
+import React from "react";
 
 export default function Search() {
     return (
@@ -5,9 +7,9 @@ export default function Search() {
             <main className="max-w-screen-2xl m-auto bg-white">
                 {/* NAVBAR */}
                 <nav className="bg-white p-2 flex justify-between">
-                    <a href="" className="font-bold text-gray-700 text-2xl">
+                    <Link href="/" className="font-bold text-gray-700 text-2xl">
                         {" "} OpenTable{" "}
-                    </a>
+                    </Link>
                     <div>
                         <div className="flex">
                             <button
@@ -27,9 +29,11 @@ export default function Search() {
                             type="text"
                             placeholder="State, city or town"
                         />
-                        <button className="rounded bg-red-600 px-9 py-2 text-white">
-                            Let's go
-                        </button>
+                        <Link href="/search">
+                            <button className="rounded bg-red-600 px-9 py-2 text-white">
+                                Let's go
+                            </button>
+                        </Link>
                     </div>
                 </div>
                 <div className="flex py-4 m-auto w-2/3 justify-between items-start">
@@ -71,31 +75,33 @@ export default function Search() {
                     </div>
                     {/* SEARCH SIDE BAR */}
                     <div className="w-5/6">
-                        {/* RESAURANT CAR */}
-                        <div className="border-b flex pb-5">
-                            <img
-                                src="https://images.otstatic.com/prod1/49153814/2/medium.jpg"
-                                alt=""
-                                className="w-44 rounded"
-                            />
-                            <div className="pl-5">
-                                <h2 className="text-3xl">Aiāna Restaurant Collective</h2>
-                                <div className="flex items-start">
-                                    <div className="flex mb-2">*****</div>
-                                    <p className="ml-2 text-sm">Awesome</p>
-                                </div>
-                                <div className="mb-9">
-                                    <div className="font-light flex text-reg">
-                                        <p className="mr-4">$$$</p>
-                                        <p className="mr-4">Mexican</p>
-                                        <p className="mr-4">Ottawa</p>
+                        {/* RESTAURANT CARD */}
+                        <Link href="/restaurant/aiana">
+                            <div className="border-b flex pb-5">
+                                <img
+                                    src="https://images.otstatic.com/prod1/49153814/2/medium.jpg"
+                                    alt=""
+                                    className="w-44 rounded"
+                                />
+                                <div className="pl-5">
+                                    <h2 className="text-3xl">Aiāna Restaurant Collective</h2>
+                                    <div className="flex items-start">
+                                        <div className="flex mb-2">*****</div>
+                                        <p className="ml-2 text-sm">Awesome</p>
+                                    </div>
+                                    <div className="mb-9">
+                                        <div className="font-light flex text-reg">
+                                            <p className="mr-4">$$$</p>
+                                            <p className="mr-4">Mexican</p>
+                                            <p className="mr-4">Ottawa</p>
+                                        </div>
+                                    </div>
+                                    <div className="text-red-600">
+                                        <a href="">View more information</a>
                                     </div>
                                 </div>
-                                <div className="text-red-600">
-                                    <a href="">View more information</a>
-                                </div>
                             </div>
-                        </div>
+                        </Link>
                         {/* RESAURANT CAR */}
                     </div>
                 </div>
